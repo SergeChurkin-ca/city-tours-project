@@ -1,57 +1,17 @@
 import React, { Component } from "react";
-import firebase from "./firebase";
-import "./App.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import "./App.scss";
+import Navbar from "./components/Navbar/Navbar";
+import tourData from "./tourData";
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      tours: [],
-    };
-  }
-  componentDidMount() {
-    const dbRef = firebase.database().ref();
-
-    dbRef.on("value", (snapshot) => {
-      // checking changes in db
-
-      const data = snapshot.val();
-
-      const newToursAarray = [];
-
-      for (let inventoryName in data) {
-        const toursObject = {
-          id: inventoryName,
-          tours: data[inventoryName],
-          name: data[inventoryName].name,
-          seats: data[inventoryName].seats,
-          date: data[inventoryName].date,
-          duration: data[inventoryName].duration,
-        };
-        newToursAarray.push(toursObject);
-      }
-
-      this.setState({
-        tours: newToursAarray,
-      });
-    });
-  }
   render() {
     return (
-      <div className="tourlist">
-        {this.state.tours.map((toursObject) => {
-          return (
-            <ul className="inventoryItem" key={toursObject.id}>
-              <li>{toursObject.name}</li>
-              <li>{toursObject.date}</li>
-              <li>{toursObject.duration} hrs</li>
-              <li>{toursObject.seats} seats</li>
-            </ul>
-          );
-        })}
-      </div>
+      <React.Fragment>
+        <Navbar />
+        <tourData />
+      </React.Fragment>
     );
   }
 }
+
 export default App;
