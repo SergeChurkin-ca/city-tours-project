@@ -1,17 +1,24 @@
+@import "../../index.scss";
 .tourlist {
     width: 80%;
     max-width: 1170px;
     margin: 0 auto;
     color: black;
-    // border: solid 2px grey;
-    // border-radius: 2px 2px 2px;
-    // display: inline-flex;
-    // flex-direction: row;
-    // justify-content: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 2em;
-    // border: solid 2px grey;
+    grid-row-gap: 2em;
+}
+
+.tourlist h3 {
+    text-transform: uppercase;
+    border-bottom: solid 2px grey;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 1em;
+    background-color: $mainGreen;
+    color: rgb(65, 43, 4);
 }
 
 .tourlist section {

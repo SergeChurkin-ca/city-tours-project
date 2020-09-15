@@ -48,9 +48,10 @@ export default class Tour extends Component {
         {this.state.tours.map((toursObject) => {
           return (
             <section className="tourItem">
+              <h3> {toursObject.name} </h3>
               <ul className="inventoryItem" key={toursObject.id}>
                 <span>{this.removeTour}X</span>
-                <li> {toursObject.name} </li>
+
                 <li> {toursObject.date} </li>
                 <li>{toursObject.duration} hrs</li>
                 <li> {toursObject.seats} </li>
