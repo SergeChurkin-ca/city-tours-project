@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import firebase from "../../firebase";
+import tourData from "../../tourData";
 import "./tour.scss";
 
 // Data obtained from DB and rendered on page
@@ -8,8 +9,10 @@ export default class Tour extends Component {
     super();
     this.state = {
       tours: [],
+      removeTour: "",
     };
   }
+
   componentDidMount() {
     const dbRef = firebase.database().ref();
 
@@ -29,7 +32,7 @@ export default class Tour extends Component {
           date: data[inventoryName].date,
           duration: data[inventoryName].duration,
           imgUrl:
-            "https://source.unsplash.com/150x150/?" + data[inventoryName].name,
+            "https://source.unsplash.com/350x350/?" + data[inventoryName].name,
         };
         newToursAarray.push(toursObject);
       }
@@ -44,16 +47,16 @@ export default class Tour extends Component {
       <div className="tourlist">
         {this.state.tours.map((toursObject) => {
           return (
-            <ul className="inventoryItem" key={toursObject.id}>
-              <li> {toursObject.name} </li>
-              <li> {toursObject.date} </li>
-              <li>{toursObject.duration} hrs</li>
-              <li> {toursObject.seats} </li>
-              <li>
-                <img src={toursObject.imgUrl} alt="" />
-              </li>
-              <hr />
-            </ul>
+            <section className="tourItem">
+              <ul className="inventoryItem" key={toursObject.id}>
+                <span>{this.removeTour}X</span>
+                <li> {toursObject.name} </li>
+                <li> {toursObject.date} </li>
+                <li>{toursObject.duration} hrs</li>
+                <li> {toursObject.seats} </li>
+              </ul>
+              <img src={toursObject.imgUrl} alt="" />
+            </section>
           );
         })}
       </div>

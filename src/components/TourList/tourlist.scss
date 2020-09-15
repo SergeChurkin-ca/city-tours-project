@@ -1,12 +1,30 @@
 .tourlist {
     width: 80%;
+    max-width: 1170px;
     margin: 0 auto;
     color: black;
+    // border: solid 2px grey;
+    // border-radius: 2px 2px 2px;
+    // display: inline-flex;
+    // flex-direction: row;
+    // justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2em;
+    // border: solid 2px grey;
+}
+
+.tourlist section {
+    // width: 50%;
     border: solid 2px grey;
-    border-radius: 2px 2px 2px;
 }
 
 .tourlist li {
-    width: calc((100% / 5) - 5em);
     display: inline-flex;
+}
+
+.tourlist img {
+    width: 100%;
+    height: auto;
+    float: left;
 }

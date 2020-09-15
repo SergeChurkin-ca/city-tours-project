@@ -7,7 +7,7 @@ export default function Navbar() {
     <nav className="navbar">
       <ul className="nav-links">
         <li>
-          <img src={logo} alt="bee logo" class="logo" />
+          <img src={logo} alt="bee logo" className="logo" />
           <h4> tour_Bees / </h4>
         </li>
         <li>
@@ -26,7 +26,10 @@ export default function Navbar() {
           </a>
         </li>
         <li>
-          <a href="/" className="nav-link">
+          <a
+            href="https://sergechurkin-ca.github.io/sergechurkin-projectFive/?"
+            className="nav-link"
+          >
             agent 's page
           </a>
         </li>

@@ -12,7 +12,7 @@ class App extends Component {
         <Navbar />
         <ul className="tourHeader">
           <li> Tour Name </li> <li> Date </li> <li> Duration </li>
-          <li> Seats Total </li>
+          <li> Seats Total </li> <li> Photos </li>
         </ul>
         <TourList />
       </React.Fragment>
