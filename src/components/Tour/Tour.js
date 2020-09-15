@@ -28,6 +28,8 @@ export default class Tour extends Component {
           seats: data[inventoryName].seats,
           date: data[inventoryName].date,
           duration: data[inventoryName].duration,
+          imgUrl:
+            "https://source.unsplash.com/150x150/?" + data[inventoryName].name,
         };
         newToursAarray.push(toursObject);
       }
@@ -43,13 +45,14 @@ export default class Tour extends Component {
         {this.state.tours.map((toursObject) => {
           return (
             <ul className="inventoryItem" key={toursObject.id}>
-              <li>{toursObject.name} </li>
-              <li>{toursObject.date} </li>
+              <li> {toursObject.name} </li>
+              <li> {toursObject.date} </li>
+              <li>{toursObject.duration} hrs</li>
+              <li> {toursObject.seats} </li>
               <li>
-                {toursObject.duration}
-                hrs
+                <img src={toursObject.imgUrl} alt="" />
               </li>
-              <li> {toursObject.seats} </li> <hr />
+              <hr />
             </ul>
           );
         })}
