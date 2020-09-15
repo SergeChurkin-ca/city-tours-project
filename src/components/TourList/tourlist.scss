@@ -31,17 +31,20 @@ h5 {
     position: relative;
 }
 
+span i {
+    cursor: pointer;
+    padding: 0 0.5em;
+}
+
 .tour-info {
-    // display: none;
+    width: 100%;
+    background-color: $mainGrey;
     transition: $mainTransition;
     text-transform: none;
     border: solid 2px red;
     position: absolute;
     top: -1em;
     padding: 0 0 30%;
-    opacity: 0;
-    background-color: white;
-    width: 100%;
 }
 
 .tourlist section {
@@ -61,8 +64,7 @@ h5 {
 
 .close-btn {
     position: absolute;
-    right: 2%;
-    top: 5%;
+    right: 0;
     font-size: 2.5rem;
     color: $mainGreen;
     text-shadow: 2px 2px 2px grey;
@@ -71,8 +73,7 @@ h5 {
     opacity: 0;
 }
 
-.img-container:hover .close-btn,
-.img-container:hover .tour-info {
+.img-container:hover .close-btn {
     opacity: 1;
 }
 

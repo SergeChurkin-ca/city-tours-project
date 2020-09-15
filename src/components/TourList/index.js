@@ -11,9 +11,10 @@ export default class TourList extends Component {
     console.log(id);
   };
   render() {
+    // const { tours } = this.state;
     return (
       <div>
-        <Tour />
+        <Tour removeTour={this.removeTour} />
       </div>
     );
   }

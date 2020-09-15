@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import firebase from "../../firebase";
-import tourData from "../../tourData";
 import "./tour.scss";
 
 // Data obtained from DB and rendered on page
@@ -10,17 +9,23 @@ export default class Tour extends Component {
     this.state = {
       tours: [],
       removeTour: "",
+      showInfo: false,
     };
   }
+
+  // button that toggles info
+  handleInfo = (id) => {
+    this.setState({
+      showInfo: id,
+    });
+  };
 
   componentDidMount() {
     const dbRef = firebase.database().ref();
 
     dbRef.on("value", (snapshot) => {
       // checking changes in db
-
       const data = snapshot.val();
-
       const newToursAarray = [];
 
       for (let inventoryName in data) {
@@ -34,7 +39,9 @@ export default class Tour extends Component {
           imgUrl:
             "https://source.unsplash.com/350x350/?" + data[inventoryName].name,
           // this is temporary tour info placeholder and will be removed and connetcted to real DB
-          info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+          info:
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi animi sint repudiandae amet quasi fuga quis ullam quibusdam. Magni ipsam iste aspernatur a saepe fugiat. " +
+            data[inventoryName].name,
         };
         newToursAarray.push(toursObject);
       }
@@ -44,6 +51,7 @@ export default class Tour extends Component {
       });
     });
   }
+
   render() {
     return (
       <div className="tourlist">
@@ -53,8 +61,9 @@ export default class Tour extends Component {
               <header>
                 <h3> {toursObject.name} </h3>
                 <h5>
-                  info{""}
-                  <span>
+                  info
+                  {/* button that toggles info */}
+                  <span onClick={() => this.handleInfo(toursObject.id)}>
                     <i className="fas fa-caret-square-down"></i>
                   </span>
                 </h5>
@@ -65,9 +74,12 @@ export default class Tour extends Component {
                 <li> {toursObject.seats} seats </li>
               </ul>
               <div className="img-container">
-                <p className="tour-info">{toursObject.info}</p>
+                {this.state.showInfo == toursObject.id && (
+                  // text that toggles when clicking on info button
+                  <p className="tour-info">{toursObject.info}</p>
+                )}
                 <img src={toursObject.imgUrl} alt="image of the tour" />
-                <span className="close-btn">
+                <span className="close-btn" onClick={this.removeTour}>
                   <i className="fas fa-window-close"></i>
                 </span>
               </div>
