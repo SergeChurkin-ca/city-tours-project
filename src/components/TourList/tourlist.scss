@@ -2,36 +2,82 @@
 .tourlist {
     width: 80%;
     max-width: 1170px;
-    margin: 0 auto;
+    margin: 5em auto;
     color: black;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-column-gap: 2em;
     grid-row-gap: 2em;
 }
 
-.tourlist h3 {
+header {
     text-transform: uppercase;
     border-bottom: solid 2px grey;
     display: flex;
     justify-content: center;
     margin: auto;
-    padding: 1em;
+    // padding: 1em;
     background-color: $mainGreen;
     color: rgb(65, 43, 4);
+    position: relative;
+}
+
+h5 {
+    position: absolute;
+    right: 1em;
+}
+
+.img-container {
+    position: relative;
+}
+
+.tour-info {
+    // display: none;
+    transition: $mainTransition;
+    text-transform: none;
+    border: solid 2px red;
+    position: absolute;
+    top: -1em;
+    padding: 0 0 30%;
+    opacity: 0;
+    background-color: white;
+    width: 100%;
 }
 
 .tourlist section {
-    // width: 50%;
     border: solid 2px grey;
 }
 
-.tourlist li {
-    display: inline-flex;
+.tourItem li {
+    display: inline;
+    text-align: center;
 }
 
 .tourlist img {
     width: 100%;
     height: auto;
     float: left;
+}
+
+.close-btn {
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    font-size: 2.5rem;
+    color: $mainGreen;
+    text-shadow: 2px 2px 2px grey;
+    transition: $mainTransition;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.img-container:hover .close-btn,
+.img-container:hover .tour-info {
+    opacity: 1;
+}
+
+@media (max-width: 350px) {
+    .tourlist {
+        display: inline;
+    }
 }

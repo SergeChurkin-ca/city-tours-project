@@ -2,18 +2,9 @@ $mainBlack: rgb(32, 31, 31);
 $mainGreen: #3d9970;
 $mainWhite: rgb(247, 242, 242);
 $mainGrey: #ccc5c5;
+$mainTransition: all 0.5s linear;
 body {
     font-family: "Open Sans", sans-serif;
     background-color: $mainWhite;
     color: $mainGrey;
-}
-
-.tourHeader {
-    background-color: lightyellow;
-    margin: 5em auto;
-    width: 80%;
-    margin: 2em auto;
-    color: black;
-    // border: solid 2px grey;
-    // border-radius: 2px 2px 2px;
 }

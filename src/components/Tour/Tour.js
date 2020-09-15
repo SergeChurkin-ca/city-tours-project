@@ -33,6 +33,8 @@ export default class Tour extends Component {
           duration: data[inventoryName].duration,
           imgUrl:
             "https://source.unsplash.com/350x350/?" + data[inventoryName].name,
+          // this is temporary tour info placeholder and will be removed and connetcted to real DB
+          info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
         };
         newToursAarray.push(toursObject);
       }
@@ -48,15 +50,27 @@ export default class Tour extends Component {
         {this.state.tours.map((toursObject) => {
           return (
             <section className="tourItem">
-              <h3> {toursObject.name} </h3>
+              <header>
+                <h3> {toursObject.name} </h3>
+                <h5>
+                  info{""}
+                  <span>
+                    <i className="fas fa-caret-square-down"></i>
+                  </span>
+                </h5>
+              </header>
               <ul className="inventoryItem" key={toursObject.id}>
-                <span>{this.removeTour}X</span>
-
-                <li> {toursObject.date} </li>
-                <li>{toursObject.duration} hrs</li>
-                <li> {toursObject.seats} </li>
+                <li> {toursObject.date} |</li>
+                <li>{toursObject.duration} hrs |</li>
+                <li> {toursObject.seats} seats </li>
               </ul>
-              <img src={toursObject.imgUrl} alt="" />
+              <div className="img-container">
+                <p className="tour-info">{toursObject.info}</p>
+                <img src={toursObject.imgUrl} alt="image of the tour" />
+                <span className="close-btn">
+                  <i className="fas fa-window-close"></i>
+                </span>
+              </div>
             </section>
           );
         })}

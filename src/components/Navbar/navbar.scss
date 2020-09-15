@@ -1,13 +1,13 @@
 @import "../../index.scss";
 .navbar {
     background-color: $mainGreen;
-    margin: -1em auto;
+    margin: -1em auto 0 -3em;
 }
 
 .nav-links a {
     color: $mainGrey;
     font-size: 1.1rem;
-    transition: all 0.3s linear;
+    transition: $mainTransition;
     text-decoration: none;
     &:hover {
         color: black;
@@ -16,22 +16,24 @@
 
 .logo {
     height: 5em;
+    margin: 1em;
 }
 
-li {
+.navbar li {
     text-transform: uppercase;
     list-style-type: none;
     display: inline-flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    padding: 1em 0;
-    width: calc((100% / 5) - 0.4em);
+    flex: 1 0 200px;
     justify-content: center;
     align-items: center;
     vertical-align: middle;
-    min-width: 150px;
+    width: calc((100% / 5) - 0.5em);
+    // border: solid 2px red;
 }
 
-.active {
-    color: orangered;
+@media (max-width: 450px) {
+    .navbar li {
+        width: 100%;
+    }
 }
