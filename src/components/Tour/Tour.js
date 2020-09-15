@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import firebase from "./firebase";
+import firebase from "../../firebase";
+import "./tour.scss";
 
 // Data obtained from DB and rendered on page
-export default class tourData extends Component {
+export default class Tour extends Component {
   constructor() {
     super();
     this.state = {
@@ -42,13 +43,13 @@ export default class tourData extends Component {
         {this.state.tours.map((toursObject) => {
           return (
             <ul className="inventoryItem" key={toursObject.id}>
-              <li> Name: {toursObject.name} </li>
-              <li> Date: {toursObject.date} </li>
+              <li>{toursObject.name} </li>
+              <li>{toursObject.date} </li>
               <li>
-                Duration: {toursObject.duration}
+                {toursObject.duration}
                 hrs
               </li>
-              <li> seats: {toursObject.seats} </li> <hr />
+              <li> {toursObject.seats} </li> <hr />
             </ul>
           );
         })}
