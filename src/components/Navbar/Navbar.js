@@ -27,7 +27,7 @@ export default function Navbar() {
         </li>
         <li>
           <a
-            href="https://sergechurkin-ca.github.io/sergechurkin-projectFive/?"
+            href="/Users/serhiychurkin/Juno-Bootcamp/reactLearning/city-tour-project/city-tour-project/src/components/agentsPage/App.js"
             className="nav-link"
           >
             agent 's page
