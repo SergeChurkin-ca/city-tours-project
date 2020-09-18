@@ -20,6 +20,12 @@ export default class Tour extends Component {
     });
   };
 
+  removeTour = (id) => {
+    this.setState({
+      showInfo: !id,
+    });
+  };
+
   componentDidMount() {
     const dbRef = firebase.database().ref();
 
@@ -61,27 +67,37 @@ export default class Tour extends Component {
               <header>
                 <h3> {toursObject.name} </h3>
                 <h5>
-                  info
-                  {/* button that toggles info */}
+                  info {/* button that toggles info */}
                   <span onClick={() => this.handleInfo(toursObject.id)}>
-                    <i className="fas fa-caret-square-down"></i>
+                    <i className="fas fa-caret-square-down"> </i>
                   </span>
                 </h5>
               </header>
               <ul className="inventoryItem" key={toursObject.id}>
-                <li> {toursObject.date} |</li>
-                <li>{toursObject.duration} hrs |</li>
-                <li> {toursObject.seats} seats </li>
+                <li> {toursObject.date} | </li>
+                <li>
+                  {toursObject.duration}
+                  hrs |
+                </li>
+                <li>
+                  {toursObject.seats}
+                  seats
+                </li>
               </ul>
               <div className="img-container">
-                {this.state.showInfo == toursObject.id && (
+                {this.state.showInfo === toursObject.id && (
                   // text that toggles when clicking on info button
-                  <p className="tour-info">{toursObject.info}</p>
+                  <p className="tour-info">
+                    {toursObject.info}
+                    <span
+                      className="close-btn"
+                      onClick={() => this.removeTour(toursObject.id)}
+                    >
+                      <i class="fas fa-chevron-up"></i>
+                    </span>
+                  </p>
                 )}
-                <img src={toursObject.imgUrl} alt="image of the tour" />
-                <span className="close-btn" onClick={this.removeTour}>
-                  <i className="fas fa-window-close"></i>
-                </span>
+                <img src={toursObject.imgUrl} alt="imageoftour" />
               </div>
             </section>
           );

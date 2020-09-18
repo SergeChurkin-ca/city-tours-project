@@ -41,10 +41,13 @@ span i {
     background-color: $mainGrey;
     transition: $mainTransition;
     text-transform: none;
-    border: solid 2px red;
+    border: solid 3px grey;
+    border-style: outset;
+    border-radius: 0 0 10px 10px;
     position: absolute;
     top: -1em;
     padding: 0 0 30%;
+    // display: none;
 }
 
 .tourlist section {
@@ -65,12 +68,12 @@ span i {
 .close-btn {
     position: absolute;
     right: 0;
+    bottom: 3%;
     font-size: 2.5rem;
     color: $mainGreen;
     text-shadow: 2px 2px 2px grey;
     transition: $mainTransition;
     cursor: pointer;
-    opacity: 0;
 }
 
 .img-container:hover .close-btn {
