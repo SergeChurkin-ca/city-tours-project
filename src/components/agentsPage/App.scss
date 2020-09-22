@@ -1,0 +1,191 @@
+@import url("../../setup.scss");
+// body {
+//     background: #e8e7e7;
+//     font-family: arial;
+//     text-transform: uppercase;
+// }
+// /* ********* HEADER *************** */
+.header-booking,
+header li {
+    color: #fff;
+    padding: 5px 10px;
+    text-align: center;
+    display: block;
+    align-items: center;
+    text-align: left;
+    margin: 1em 0 0;
+}
+
+.header-booking h1 {
+    flex-grow: 1;
+    font-size: 1.5em;
+    font-size: calc(15px + (40 - 15) * ((100vw - 300px) / (1600 - 300)));
+    letter-spacing: 2px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.tour-booking-list {
+    margin: 1em auto;
+    text-align: center;
+}
+
+
+/* ********* FORMS *************** */
+
+form {
+    font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.formWrapper {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    padding: 1em;
+}
+
+.noteInput {
+    line-height: 1.5em;
+    padding: 0.5em;
+    margin: 1em;
+    width: 90%;
+    padding: 1em;
+}
+
+.dateInput {
+    width: calc((100% / 4) - 1em);
+    margin: 1em;
+    padding: 1em;
+}
+
+button,
+input[type="submit"] {
+    outline: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+
+/* ********* COMPONENT STYLES *************** */
+
+.tour-booking-list {
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 2px 0 rgb(133, 104, 250);
+    border-radius: 6px;
+}
+
+.name {
+    flex-grow: 1;
+    line-height: 3.5em;
+    padding-left: 10px;
+}
+
+.date,
+.seats {
+    text-align: right;
+    padding-left: 0;
+    line-height: 3em;
+    margin-right: 0.8em;
+}
+
+input[type="submit"]:hover {
+    background: #fff;
+    color: #44338d;
+    cursor: pointer;
+}
+
+// /* ********* LIST *************** */
+.tour-booking-list ul {
+    display: grid;
+    grid-template-columns: 15% 35% 20% 20% 10%;
+    grid-column-gap: 0px;
+    grid-row-gap: 5px;
+    width: 95%;
+    // padding: 0.5em 0;
+    margin: 0;
+}
+
+li,
+span {
+    font-size: calc(6px + (15 - 6) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.tour-booking-list ul {
+    text-align: left;
+    padding: 1em 0.2em;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.inventory-booking-Item:nth-child(1n+2):hover {
+    background-color: rgb(193, 228, 240);
+    color: black;
+}
+
+.inventory-booking-Item {
+    margin: 0 auto;
+    width: 96%;
+}
+
+button,
+.noteButton {
+    border: 0;
+    color: red;
+    // background-color: rgb(241, 239, 239, 0);
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+// /* ********* INPUT SECTION ****************** */
+// .noteButton,
+// .noteInput {
+//     margin: 0px;
+//     border-top-right-radius: 15px;
+//     border-bottom-right-radius: 15px;
+//     padding: 1em 1em;
+//     font-family: "Droid Sans", sans-serif;
+//     background-color: #019875;
+//     color: #fff;
+//     transition: 0.2s ease-out;
+// }
+// .noteButton:hover {
+//     background-color: #02ba85;
+//     color: #fff;
+//     transition: 0.2s ease-out;
+// }
+// .noteInput,
+// .dateInput {
+//     border-top-left-radius: 4px;
+//     border-bottom-left-radius: 4px;
+//     font-family: "Droid Sans", sans-serif;
+//     background-color: rgba(34, 49, 63, 0.8);
+//     color: #fff;
+//     transition: 0.2s ease-out;
+// }
+// .noteInput:focus {
+//     background-color: #e4f1fe;
+//     color: #111;
+//     transition: 0.2s ease-in;
+// }
+// /* *********** MEDIA QUERIES ***************** */
+// @media (max-width: 300px) {
+//     .dateInput,
+//     .noteInput {
+//         width: 90%;
+//         margin: 0 1em auto;
+//     }
+//     form,
+//     ul {
+//         padding: 0.2em;
+//         margin: 0;
+//     }
+// }
+// @media (max-width: 352px) {
+//     .noteInput,
+//     .noteButton {
+//         border-radius: 5px;
+//     }
+// }

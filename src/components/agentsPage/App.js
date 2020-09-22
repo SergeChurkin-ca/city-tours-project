@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 import firebase from "../../firebase";
 import NewTourForm from "./NewTourForm.js";
-import "./App.css";
+import "./App.scss";
 
 const Header = (props) => {
   return (
-    <header>
+    <header className="header-booking">
       <h1> {props.title} </h1>
       <span className="stats"> Total tours: {props.totalTours} </span>
       <ul>
+        <li>action</li>
         <li>Tour Name</li>
-        <li>Date</li> <li>Duration</li>
+        <li>Date</li>
+        <li>Duration</li>
         <li>Seats Total</li>
       </ul>
     </header>
@@ -76,11 +78,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="tourlist">
+      <div className="tour-booking-list">
         <Header title="Tour Inventory" totalTours={this.state.tours.length} />
         {this.state.tours.map((toursObject) => {
           return (
-            <ul className="inventoryItem" key={toursObject.id}>
+            <ul className="inventory-booking-Item" key={toursObject.id}>
               <li>
                 <button onClick={() => this.handleRemoveTour(toursObject.id)}>
                   X

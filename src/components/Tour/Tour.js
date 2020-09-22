@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import firebase from "../../firebase";
-import "./tour.scss";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 // Data obtained from DB and rendered on page
 export default class Tour extends Component {
@@ -61,20 +59,21 @@ export default class Tour extends Component {
 
   render() {
     return (
-      <div className="tourlist">
+      <div className="tour-output-list">
         {this.state.tours.map((toursObject) => {
           return (
-            <section className="tourItem">
-              <header>
+            <section className="tour-output-Item">
+              <header class="header-tour">
                 <h3> {toursObject.name} </h3>
                 <h5>
-                  info {/* button that toggles info */}
+                  info
+                  {/* button that toggles info */}
                   <span onClick={() => this.handleInfo(toursObject.id)}>
                     <i className="fas fa-caret-square-down"> </i>
                   </span>
                 </h5>
               </header>
-              <ul className="inventoryItem" key={toursObject.id}>
+              <ul className="inventory-output-Item" key={toursObject.id}>
                 <li> {toursObject.date} | </li>
                 <li>
                   {toursObject.duration}
@@ -94,7 +93,7 @@ export default class Tour extends Component {
                       className="close-btn"
                       onClick={() => this.removeTour(toursObject.id)}
                     >
-                      <i class="fas fa-chevron-up"></i>
+                      <i class="fas fa-chevron-up"> </i>
                     </span>
                   </p>
                 )}

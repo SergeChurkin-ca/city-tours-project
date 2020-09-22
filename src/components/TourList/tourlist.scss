@@ -1,5 +1,5 @@
 @import "../../index.scss";
-.tourlist {
+.tour-output-list {
     width: 80%;
     max-width: 1170px;
     margin: 5em auto;
@@ -16,7 +16,6 @@ header {
     display: flex;
     justify-content: center;
     margin: auto;
-    // padding: 1em;
     background-color: $mainGreen;
     color: rgb(65, 43, 4);
     position: relative;
@@ -50,16 +49,16 @@ span i {
     // display: none;
 }
 
-.tourlist section {
+.tour-output-list section {
     border: solid 2px grey;
 }
 
-.tourItem li {
+.tour-output-Item li {
     display: inline;
     text-align: center;
 }
 
-.tourlist img {
+.tour-output-list img {
     width: 100%;
     height: auto;
     float: left;
@@ -81,7 +80,7 @@ span i {
 }
 
 @media (max-width: 350px) {
-    .tourlist {
+    .tour-output-list {
         display: inline;
     }
 }
