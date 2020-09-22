@@ -1,5 +1,8 @@
 import React from "react";
 import logo from "../../logo.svg";
+
+import { Route, Switch } from "react-router-dom";
+
 import "./navbar.scss";
 
 export default function Navbar() {
@@ -10,11 +13,7 @@ export default function Navbar() {
           <img src={logo} alt="bee logo" className="logo" />
           <h4> tour_Bees / </h4>
         </li>
-        <li>
-          <a href="/" className="nav-link">
-            home
-          </a>
-        </li>
+
         <li>
           <a href="/" className="nav-link">
             about
@@ -27,7 +26,7 @@ export default function Navbar() {
         </li>
         <li>
           <a
-            href="/Users/serhiychurkin/Juno-Bootcamp/reactLearning/city-tour-project/city-tour-project/src/components/agentsPage/App.js"
+            href="https://sergechurkin-ca.github.io/sergechurkin-projectFive/?"
             className="nav-link"
           >
             agent 's page
