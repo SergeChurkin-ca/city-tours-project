@@ -1,7 +1,7 @@
 @import "../../index.scss";
 .navbar {
     background-color: $mainGreen;
-    margin: -1em auto -3em;
+    margin: -1em auto 3em;
 }
 
 .nav-links a {
@@ -29,7 +29,6 @@
     align-items: center;
     vertical-align: middle;
     width: calc((100% / 5) - 0.5em);
-    // border: solid 2px red;
 }
 
 @media (max-width: 450px) {
