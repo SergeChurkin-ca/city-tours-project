@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import firebase from "../../firebase";
-import NoteForm from "./NewTourForm.js";
+import NewTourForm from "./NewTourForm.js";
 import "./App.css";
 
 const Header = (props) => {
@@ -9,8 +9,9 @@ const Header = (props) => {
       <h1> {props.title} </h1>
       <span className="stats"> Total tours: {props.totalTours} </span>
       <ul>
-        <li> </li> <li> Tour Name </li> <li> Date </li> <li> Duration </li>
-        <li> Seats Total </li>
+        <li>Tour Name</li>
+        <li>Date</li> <li>Duration</li>
+        <li>Seats Total</li>
       </ul>
     </header>
   );
@@ -94,7 +95,7 @@ class App extends Component {
             </ul>
           );
         })}
-        <NoteForm addTour={this.addTour} />
+        <NewTourForm addTour={this.addTour} />
       </div>
     );
   }

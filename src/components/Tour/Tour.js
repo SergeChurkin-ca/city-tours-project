@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import firebase from "../../firebase";
 import "./tour.scss";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 // Data obtained from DB and rendered on page
 export default class Tour extends Component {
