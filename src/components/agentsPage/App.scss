@@ -1,9 +1,9 @@
 @import url("../../setup.scss");
-// body {
-//     background: #e8e7e7;
-//     font-family: arial;
-//     text-transform: uppercase;
-// }
+body {
+    font-family: arial;
+    text-transform: uppercase;
+}
+
 // /* ********* HEADER *************** */
 .header-booking {
     color: #fff;
@@ -26,7 +26,7 @@
 
 .tour-booking-list {
     margin: 1em auto;
-    // text-align: center;
+    text-align: center;
 }
 
 
@@ -70,7 +70,6 @@ input[type="submit"] {
 .tour-booking-list {
     width: 80%;
     margin: 0 auto;
-    box-shadow: 0 2px 0 rgb(133, 104, 250);
     border-radius: 6px;
 }
 
@@ -101,7 +100,7 @@ input[type="submit"]:hover {
     grid-column-gap: 0px;
     grid-row-gap: 5px;
     width: 95%;
-    // padding: 0.5em 0;
+    padding: 0.5em 0;
     margin: 0;
 }
 
@@ -139,52 +138,59 @@ button:hover {
 }
 
 // /* ********* INPUT SECTION ****************** */
-// .noteButton,
-// .noteInput {
-//     margin: 0px;
-//     border-top-right-radius: 15px;
-//     border-bottom-right-radius: 15px;
-//     padding: 1em 1em;
-//     font-family: "Droid Sans", sans-serif;
-//     background-color: #019875;
-//     color: #fff;
-//     transition: 0.2s ease-out;
-// }
-// .noteButton:hover {
-//     background-color: #02ba85;
-//     color: #fff;
-//     transition: 0.2s ease-out;
-// }
-// .noteInput,
-// .dateInput {
-//     border-top-left-radius: 4px;
-//     border-bottom-left-radius: 4px;
-//     font-family: "Droid Sans", sans-serif;
-//     background-color: rgba(34, 49, 63, 0.8);
-//     color: #fff;
-//     transition: 0.2s ease-out;
-// }
-// .noteInput:focus {
-//     background-color: #e4f1fe;
-//     color: #111;
-//     transition: 0.2s ease-in;
-// }
-// /* *********** MEDIA QUERIES ***************** */
-// @media (max-width: 300px) {
-//     .dateInput,
-//     .noteInput {
-//         width: 90%;
-//         margin: 0 1em auto;
-//     }
-//     form,
-//     ul {
-//         padding: 0.2em;
-//         margin: 0;
-//     }
-// }
-// @media (max-width: 352px) {
-//     .noteInput,
-//     .noteButton {
-//         border-radius: 5px;
-//     }
-// }
+.noteButton,
+.noteInput {
+    margin: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 1em 1em;
+    font-family: "Droid Sans", sans-serif;
+    background-color: #019875;
+    color: #fff;
+    transition: 0.2s ease-out;
+}
+
+.noteButton:hover {
+    background-color: #02ba85;
+    color: #fff;
+    transition: 0.2s ease-out;
+}
+
+.noteInput,
+.dateInput {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-family: "Droid Sans", sans-serif;
+    background-color: rgba(34, 49, 63, 0.8);
+    color: #fff;
+    transition: 0.2s ease-out;
+}
+
+.noteInput:focus {
+    background-color: #e4f1fe;
+    color: #111;
+    transition: 0.2s ease-in;
+}
+
+
+/* *********** MEDIA QUERIES ***************** */
+
+@media (max-width: 500px) {
+    .dateInput,
+    .noteInput {
+        width: 90%;
+        margin: 0 1em auto;
+    }
+    form,
+    ul {
+        padding: 0.2em;
+        margin: 0;
+    }
+}
+
+@media (max-width: 352px) {
+    .noteInput,
+    .noteButton {
+        border-radius: 5px;
+    }
+}
