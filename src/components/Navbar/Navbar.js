@@ -22,7 +22,7 @@ function Navbar() {
           </li>
 
           <li>
-            <NavLink to="../App.js">Home</NavLink>
+            <NavLink to="/">Home</NavLink>
           </li>
 
           <li>
