@@ -36,7 +36,10 @@ function Navbar() {
         </ul>
       </nav>
       <Switch>
-        <Route path="/agentsPage/" component={AgentsPage} />
+        <Route
+          path={`${process.env.PUBLIC_URL}/agentsPage`}
+          component={AgentsPage}
+        />
       </Switch>
     </Router>
   );
