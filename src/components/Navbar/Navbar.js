@@ -1,5 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from "react-router-dom";
+
 import logo from "../../logo.svg";
 
 import AgentsPage from "../agentsPage/App";
@@ -16,13 +22,13 @@ function Navbar() {
           </li>
 
           <li>
-            <Link to="/">Home</Link>
+            <NavLink to="/">Home</NavLink>
           </li>
 
           <li>
-            <Link to="/agentsPage/" className="agents-page">
+            <NavLink to="/agentsPage" className="agents-page">
               Manage Inventory
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
