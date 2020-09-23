@@ -60,52 +60,44 @@ export default class Tour extends Component {
   render() {
     return (
       <div className="tour-output-list">
-        {" "}
         {this.state.tours.map((toursObject) => {
           return (
             <section className="tour-output-Item">
               <header class="header-tour">
-                <h3> {toursObject.name} </h3>{" "}
+                <h3> {toursObject.name} </h3>
                 <h5>
-                  info {/* button that toggles info */}{" "}
+                  info {/* button that toggles info */}
                   <span onClick={() => this.handleInfo(toursObject.id)}>
-                    <i className="fas fa-caret-square-down"> </i>{" "}
-                  </span>{" "}
-                </h5>{" "}
-              </header>{" "}
+                    <i className="fas fa-caret-square-down"> </i>
+                  </span>
+                </h5>
+              </header>
               <ul className="inventory-output-item" key={toursObject.id}>
-                <li> {toursObject.date} | </li>{" "}
+                <li> {toursObject.date} | </li>
                 <li>
-                  {" "}
                   {toursObject.duration}
                   hrs |
-                </li>{" "}
-                <li>
-                  {" "}
-                  {toursObject.seats}
-                  seats{" "}
-                </li>{" "}
-              </ul>{" "}
+                </li>
+                <li> {toursObject.seats} seats</li>
+              </ul>
               <div className="img-container">
-                {" "}
                 {this.state.showInfo === toursObject.id && (
                   // text that toggles when clicking on info button
                   <p className="tour-info">
-                    {" "}
-                    {toursObject.info}{" "}
+                    {toursObject.info}
                     <span
                       className="close-btn"
                       onClick={() => this.removeTour(toursObject.id)}
                     >
-                      <i class="fas fa-chevron-up"> </i>{" "}
-                    </span>{" "}
+                      <i class="fas fa-chevron-up"> </i>
+                    </span>
                   </p>
-                )}{" "}
+                )}
                 <img src={toursObject.imgUrl} alt="imageoftour" />
-              </div>{" "}
+              </div>
             </section>
           );
-        })}{" "}
+        })}
       </div>
     );
   }

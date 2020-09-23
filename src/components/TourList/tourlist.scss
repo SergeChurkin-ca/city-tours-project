@@ -87,6 +87,12 @@ span i {
     opacity: 1;
 }
 
+@media (max-width: 780px) {
+    .tour-output-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
 @media (max-width: 350px) {
     .tour-output-list {
         display: flex;
@@ -103,5 +109,8 @@ span i {
     }
     .header-tour {
         padding: 1em 0;
+    }
+    h5 {
+        top: -0.5em;
     }
 }
