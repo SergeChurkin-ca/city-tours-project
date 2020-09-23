@@ -27,7 +27,7 @@ function Navbar() {
         </ul>
       </nav>
       <Switch>
-        <Route exact path="/agentsPage/" component={AgentsPage} />
+        <Route path="/agentsPage/" component={AgentsPage} />
       </Switch>
     </Router>
   );
