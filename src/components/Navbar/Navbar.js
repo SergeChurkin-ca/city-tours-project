@@ -26,9 +26,9 @@ function Navbar() {
           </li>
         </ul>
       </nav>
-      <Switch>
-        <Route path="/agentsPage/" component={AgentsPage} />
-      </Switch>
+      {/* <Switch> */}
+      <Route path="/agentsPage/" component={AgentsPage} />
+      {/* </Switch> */}
     </Router>
   );
 }
