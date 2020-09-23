@@ -22,11 +22,14 @@ function Navbar() {
           </li>
 
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to={`${process.env.PUBLIC_URL}/`}>Home</NavLink>
           </li>
 
           <li>
-            <NavLink to="/agentsPage" className="agents-page">
+            <NavLink
+              to={`${process.env.PUBLIC_URL}/agentsPage`}
+              className="agents-page"
+            >
               Manage Inventory
             </NavLink>
           </li>
