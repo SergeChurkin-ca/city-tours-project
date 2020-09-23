@@ -13,7 +13,7 @@ import "./navbar.scss";
 
 function Navbar() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <nav className="navbar">
         <ul className="nav-links">
           <li>
