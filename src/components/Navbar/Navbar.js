@@ -12,7 +12,7 @@ function Navbar() {
         <ul className="nav-links">
           <li>
             <img src={logo} alt="bee logo" className="logo" />
-            <h4> tour_Bees / </h4>
+            <h2> tour_Bees / </h2>
           </li>
 
           <li>

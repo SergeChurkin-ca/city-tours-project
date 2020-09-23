@@ -6,7 +6,7 @@
     color: black;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-column-gap: 2em;
+    grid-column-gap: 1em;
     grid-row-gap: 2em;
 }
 
@@ -46,16 +46,24 @@ span i {
     position: absolute;
     top: -1em;
     padding: 0 0 30%;
-    // display: none;
 }
 
 .tour-output-list section {
     border: solid 2px grey;
+    margin: 0 auto;
 }
 
-.tour-output-Item li {
+.inventory-output-item li {
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.inventory-output-item li {
     display: inline;
     text-align: center;
+    margin: 0 auto;
+    font-size: 1rem;
 }
 
 .tour-output-list img {
@@ -81,6 +89,19 @@ span i {
 
 @media (max-width: 350px) {
     .tour-output-list {
-        display: inline;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+    }
+    h3 {
+        position: relative;
+        left: -10%;
+        margin: 0;
+        padding: 0;
+    }
+    .header-tour {
+        padding: 1em 0;
     }
 }

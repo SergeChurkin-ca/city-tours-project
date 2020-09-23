@@ -9,7 +9,7 @@ const Header = (props) => {
       <h1> {props.title} </h1>
       <span className="stats"> Total tours: {props.totalTours} </span>
       <ul>
-        <li>action</li>
+        <li>Action</li>
         <li>Tour Name</li>
         <li>Date</li>
         <li>Duration</li>
@@ -85,10 +85,11 @@ class App extends Component {
             <ul className="inventory-booking-Item" key={toursObject.id}>
               <li>
                 <button onClick={() => this.handleRemoveTour(toursObject.id)}>
-                  X
+                  <i class="fas fa-backspace"></i>
                 </button>
               </li>
-              <li> {toursObject.name} </li> <li> {toursObject.date} </li>
+              <li>{toursObject.name}</li>
+              <li>{toursObject.date}</li>
               <li>
                 {toursObject.duration}
                 hrs

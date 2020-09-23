@@ -17,7 +17,7 @@ body {
 
 .header-booking h1 {
     flex-grow: 1;
-    font-size: 1.5em;
+    // font-size: 1.5em;
     font-size: calc(15px + (40 - 15) * ((100vw - 300px) / (1600 - 300)));
     letter-spacing: 2px;
     font-weight: normal;
@@ -36,13 +36,13 @@ body {
 
 form {
     font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
+    width: 100%;
 }
 
-.formWrapper {
-    width: 70%;
+.inputformWrapper {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 0;
+    margin: 1em 0;
     padding: 1em;
 }
 
@@ -119,8 +119,12 @@ span {
 }
 
 .inventory-booking-Item:nth-child(1n+2):hover {
-    background-color: rgb(193, 228, 240);
-    color: black;
+    background-color: rgb(108, 171, 192);
+    color: #fff;
+}
+
+.inventory-booking-Item:nth-child(1n+2):hover button i {
+    color: crimson;
 }
 
 .inventory-booking-Item {
@@ -131,7 +135,12 @@ span {
 button,
 .noteButton {
     border: 0;
-    color: red;
+    color: rgb(228, 88, 37);
+    background: none;
+}
+
+button i {
+    font-size: 20px;
 }
 
 button:hover {

@@ -2,11 +2,12 @@
 .navbar {
     background-color: $mainGreen;
     margin: -1em auto 3em;
+    // padding: 0.5em 0 0.5em;
 }
 
 .nav-links a {
     color: $mainGrey;
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     transition: $mainTransition;
     text-decoration: none;
     &:hover {
@@ -16,7 +17,7 @@
 
 .logo {
     height: 5em;
-    margin: 1em;
+    margin: 3em 0;
 }
 
 .navbar li {
@@ -28,7 +29,7 @@
     justify-content: center;
     align-items: center;
     vertical-align: middle;
-    width: calc((100% / 5) - 0.5em);
+    width: calc((100% / 3) - 0.5em);
 }
 
 @media (max-width: 450px) {
