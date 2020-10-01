@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/city-tours-project/static/css/main.015ef77a.chunk.css",
-    "main.js": "/city-tours-project/static/js/main.ea2e631f.chunk.js",
-    "main.js.map": "/city-tours-project/static/js/main.ea2e631f.chunk.js.map",
+    "main.js": "/city-tours-project/static/js/main.a3e7343e.chunk.js",
+    "main.js.map": "/city-tours-project/static/js/main.a3e7343e.chunk.js.map",
     "runtime-main.js": "/city-tours-project/static/js/runtime-main.a8072623.js",
     "runtime-main.js.map": "/city-tours-project/static/js/runtime-main.a8072623.js.map",
     "static/js/2.308d9082.chunk.js": "/city-tours-project/static/js/2.308d9082.chunk.js",
     "static/js/2.308d9082.chunk.js.map": "/city-tours-project/static/js/2.308d9082.chunk.js.map",
     "index.html": "/city-tours-project/index.html",
-    "precache-manifest.cdd597c5ef63203e4b3d1d67a778fb31.js": "/city-tours-project/precache-manifest.cdd597c5ef63203e4b3d1d67a778fb31.js",
+    "precache-manifest.b0c7ed259d9e1c074445fdd665ab3006.js": "/city-tours-project/precache-manifest.b0c7ed259d9e1c074445fdd665ab3006.js",
     "service-worker.js": "/city-tours-project/service-worker.js",
     "static/css/main.015ef77a.chunk.css.map": "/city-tours-project/static/css/main.015ef77a.chunk.css.map",
     "static/js/2.308d9082.chunk.js.LICENSE.txt": "/city-tours-project/static/js/2.308d9082.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.a8072623.js",
     "static/js/2.308d9082.chunk.js",
     "static/css/main.015ef77a.chunk.css",
-    "static/js/main.ea2e631f.chunk.js"
+    "static/js/main.a3e7343e.chunk.js"
   ]
 }
