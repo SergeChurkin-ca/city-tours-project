@@ -40,7 +40,7 @@ class NewTourForm extends Component {
     });
   };
 
-  nullValidation = () => {
+  nullValidation = (e) => {
     if (
       !this.state.newTourName == " " &&
       !this.state.newTourDate == " " &&
@@ -75,7 +75,7 @@ class NewTourForm extends Component {
   render() {
     return (
       <div className="inputformWrapper">
-        <form>
+        <form onSubmit={(e) => e.preventDefault()}>
           <input
             type="text"
             className="noteInput"

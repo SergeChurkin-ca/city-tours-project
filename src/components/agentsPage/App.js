@@ -9,11 +9,8 @@ const Header = (props) => {
       <h1> {props.title} </h1>
       <span className="stats"> Total tours: {props.totalTours} </span>
       <ul>
-        <li>Action</li>
-        <li>Tour Name</li>
-        <li>Date</li>
-        <li>Duration</li>
-        <li>Seats Total</li>
+        <li> Action </li> <li> Tour Name </li> <li> Date </li>
+        <li> Duration </li> <li> Seats Total </li>
       </ul>
     </header>
   );
@@ -60,7 +57,9 @@ class App extends Component {
   handleRemoveTour = (id) => {
     this.database.child(id).remove();
   };
-
+  addTour(e) {
+    e.preventDefault();
+  }
   addTour = (
     toursObjectName,
     toursObjectDate,
@@ -85,11 +84,10 @@ class App extends Component {
             <ul className="inventory-booking-Item" key={toursObject.id}>
               <li>
                 <button onClick={() => this.handleRemoveTour(toursObject.id)}>
-                  <i class="fas fa-backspace"></i>
+                  <i class="fas fa-backspace"> </i>
                 </button>
               </li>
-              <li>{toursObject.name}</li>
-              <li>{toursObject.date}</li>
+              <li> {toursObject.name} </li> <li> {toursObject.date} </li>
               <li>
                 {toursObject.duration}
                 hrs
