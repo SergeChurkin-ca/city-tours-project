@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import firebase from "../../firebase";
 import NewTourForm from "./NewTourForm.js";
+
 import "./App.scss";
 
 const Header = (props) => {
@@ -83,7 +84,7 @@ class App extends Component {
       this.database.child(id).update({
         seats: newUserValue
       });
-}
+  }
 
   addTour(e) {
     e.preventDefault();
@@ -115,7 +116,6 @@ class App extends Component {
                   <i class="fas fa-backspace"> </i>
                 </button>  
          
-            
               </li>
               <li> 
                 <button onClick={() => this.handleEditTourName(toursObject.id)}>
