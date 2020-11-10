@@ -68,7 +68,7 @@ class App extends Component {
   }
   handleEditTourDate = id => {
     let today = new Date()
-    let newUserValue = prompt("Edit tour date: year-month-dat", today.getFullYear()+"-"+[today.getMonth()]+"-"+today.getDate())
+    let newUserValue = prompt("Edit tour date: year-month-day", today.getFullYear()+"-"+[today.getMonth()]+"-"+today.getDate())
       this.database.child(id).update({
         date: newUserValue
       });
