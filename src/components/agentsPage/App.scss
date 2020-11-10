@@ -35,7 +35,7 @@ body {
 /* ********* FORMS *************** */
 
 form {
-    font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
     width: 100%;
 }
 
@@ -98,7 +98,7 @@ input[type="submit"]:hover {
 // /* ********* LIST *************** */
 .tour-booking-list ul {
     display: grid;
-    grid-template-columns: 15% 35% 20% 20% 10%;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-column-gap: 0px;
     grid-row-gap: 5px;
     width: 95%;
@@ -108,7 +108,7 @@ input[type="submit"]:hover {
 
 li,
 span {
-    font-size: calc(6px + (15 - 6) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(8px + (15 - 8) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .tour-booking-list ul {
@@ -118,16 +118,16 @@ span {
     margin: 0 auto;
 }
 
-.inventory-booking-Item:nth-child(1n+2):hover {
+.inventory-booking-item:nth-child(1n+2):hover {
     background-color: rgb(108, 171, 192);
     color: #fff;
 }
 
-.inventory-booking-Item:nth-child(1n+2):hover button i {
+.inventory-booking-item:nth-child(1n+2):hover button i {
     color: crimson;
 }
 
-.inventory-booking-Item {
+.inventory-booking-item {
     margin: 0 auto;
     width: 96%;
 }
@@ -140,7 +140,20 @@ button,
 }
 
 button i {
-    font-size: 20px;
+    font-size: 1vw;
+}
+
+@media (max-width: 800px) {
+    button i {
+        font-size: 2vw;
+    }
+    .tour-booking-list ul {
+        margin: 0.3em auto;
+    }
+    .inventory-booking-item {
+        border: solid 2px rgb(151, 148, 148);
+        box-shadow: 0.1em 0.1em 0.9em 0.1em grey;
+    }
 }
 
 button:hover {

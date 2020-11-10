@@ -67,9 +67,9 @@ export default class Tour extends Component {
                 <h3> {toursObject.name} </h3>
                 <h5>
                   info {/* button that toggles info */}
-                  {/* <span onClick={() => this.handleInfo(toursObject.id)}>
+                  <span onClick={() => this.handleInfo(toursObject.id)}>
                     <i className="fas fa-caret-square-down"> </i>
-                  </span> */}
+                  </span>
                 </h5>
               </header>
               <ul className="inventory-output-item" key={toursObject.id}>

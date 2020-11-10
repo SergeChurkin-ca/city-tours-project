@@ -53,21 +53,37 @@ class App extends Component {
     });
   }
 
-  // **********REMOVING ADN ADDING TOURS****************
+  // ********** REMOVING TOURS****************
   handleRemoveTour = (id) => {
     this.database.child(id).remove();
   };
 
-handleEditTourName = id => {
-  let newUserValue = prompt("new name")
-    //  const selectedItem = this.state.tours.find((item) => item.id === id);
-    // console.log(selectedItem);
-    this.database.child(id).update({
-      name: newUserValue
-    });
-  //  console.log(selectedItem);
+    // ********** UPDATE TOURS****************
+  handleEditTourName = id => {
+    let newUserValue = prompt("Edit Tour Name")
+      this.database.child(id).update({
+        name: newUserValue
+      });
+  }
+  handleEditTourDate = id => {
+    let today = new Date()
+    let newUserValue = prompt("Edit tour date: year-month-dat", today.getFullYear()+"-"+[today.getMonth()]+"-"+today.getDate())
+      this.database.child(id).update({
+        date: newUserValue
+      });
+  }
+  handleEditTourDuration = id => {
+    let newUserValue = prompt("Edit Tour Duration, hours")
+      this.database.child(id).update({
+        duration: newUserValue
+      });
+  }
+  handleEditTourSeats = id => {
+    let newUserValue = prompt("Edit Tour Seats")
+      this.database.child(id).update({
+        seats: newUserValue
+      });
 }
-
 
   addTour(e) {
     e.preventDefault();
@@ -93,7 +109,7 @@ handleEditTourName = id => {
         <Header title="Tour Inventory" totalTours={this.state.tours.length} />
         {this.state.tours.map((toursObject) => {
           return (
-            <ul className="inventory-booking-Item" key={toursObject.id}>
+            <ul className="inventory-booking-item" key={toursObject.id}>
               <li>
                 <button onClick={() => this.handleRemoveTour(toursObject.id)}>
                   <i class="fas fa-backspace"> </i>
@@ -106,12 +122,24 @@ handleEditTourName = id => {
                   <i class="fas fa-pen"> </i>
                 </button> 
                 {toursObject.name} </li> 
-              <li> {toursObject.date} </li>
               <li>
+                <button onClick={() => this.handleEditTourDate(toursObject.id)}>
+                  <i class="fas fa-pen"> </i>
+                </button>  
+                {toursObject.date} 
+                </li>
+              <li>
+                <button onClick={() => this.handleEditTourDuration(toursObject.id)}>
+                  <i class="fas fa-pen"> </i>
+                </button> 
                 {toursObject.duration}
                 hrs
               </li>
-              <li> {toursObject.seats} </li>
+              <li> 
+                <button onClick={() => this.handleEditTourSeats(toursObject.id)}>
+                  <i class="fas fa-pen"> </i>
+                </button> 
+                {toursObject.seats} </li>
             </ul>
           );
         })}
