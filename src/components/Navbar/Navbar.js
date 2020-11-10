@@ -18,29 +18,28 @@ function Navbar() {
         <ul className="nav-links">
           <li>
             <img src={logo} alt="bee logo" className="logo" />
-            <h2> tour_Bees / </h2>
+            <h2> tour_Bees / </h2> 
           </li>
-
           <li>
-            <NavLink to={`${process.env.PUBLIC_URL}/`}>Home</NavLink>
+            <NavLink to={`${process.env.PUBLIC_URL}/`}> Home </NavLink> 
           </li>
-
           <li>
             <NavLink
               to={`${process.env.PUBLIC_URL}/agentsPage`}
               className="agents-page"
             >
-              Manage Inventory
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
+              Manage Inventory 
+            </NavLink> 
+          </li> 
+        </ul> 
+      </nav> 
       <Switch>
         <Route
+          exact
           path={`${process.env.PUBLIC_URL}/agentsPage`}
           component={AgentsPage}
-        />
-      </Switch>
+        /> 
+      </Switch> 
     </Router>
   );
 }

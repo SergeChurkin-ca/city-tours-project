@@ -57,6 +57,18 @@ class App extends Component {
   handleRemoveTour = (id) => {
     this.database.child(id).remove();
   };
+
+handleEditTourName = id => {
+  let newUserValue = prompt("new name")
+    //  const selectedItem = this.state.tours.find((item) => item.id === id);
+    // console.log(selectedItem);
+    this.database.child(id).update({
+      name: newUserValue
+    });
+  //  console.log(selectedItem);
+}
+
+
   addTour(e) {
     e.preventDefault();
   }
@@ -85,9 +97,16 @@ class App extends Component {
               <li>
                 <button onClick={() => this.handleRemoveTour(toursObject.id)}>
                   <i class="fas fa-backspace"> </i>
-                </button>
+                </button>  
+         
+            
               </li>
-              <li> {toursObject.name} </li> <li> {toursObject.date} </li>
+              <li> 
+                <button onClick={() => this.handleEditTourName(toursObject.id)}>
+                  <i class="fas fa-pen"> </i>
+                </button> 
+                {toursObject.name} </li> 
+              <li> {toursObject.date} </li>
               <li>
                 {toursObject.duration}
                 hrs
@@ -103,3 +122,4 @@ class App extends Component {
 }
 
 export default App;
+
