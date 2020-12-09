@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "86612040a8afa60b604e041a701c8081",
+    "revision": "d86a5f13a19835b0261e48660ca453f1",
     "url": "/city-tours-project/index.html"
   },
   {
-    "revision": "6c39e801d29bb91838d4",
-    "url": "/city-tours-project/static/css/main.2d2530c8.chunk.css"
+    "revision": "8d1571207da62c3bf149",
+    "url": "/city-tours-project/static/css/main.dcc86bda.chunk.css"
   },
   {
     "revision": "319ba7df8a9b4ba0aabb",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/city-tours-project/static/js/2.9704da8d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6c39e801d29bb91838d4",
+    "revision": "8d1571207da62c3bf149",
     "url": "/city-tours-project/static/js/main.ec581b9e.chunk.js"
   },
   {
