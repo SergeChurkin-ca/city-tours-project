@@ -57,9 +57,14 @@ span i {
     box-shadow: 5px 3px 5px 5px rgb(194, 188, 188);
 }
 
+.inventory-output-item {
+    width: 100%;
+    padding: 0.5em;
+    text-align: center;
+}
+
 .inventory-output-item li {
     list-style: none;
-    text-align: center;
     margin: 0 auto;
 }
 
