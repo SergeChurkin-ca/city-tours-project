@@ -50,9 +50,11 @@ span i {
 
 .tour-output-list section {
     border: solid 2px grey;
+    border-radius: 4px;
     margin: 0 auto;
     height: 100%;
     width: 100%;
+    box-shadow: 5px 3px 5px 5px rgb(194, 188, 188);
 }
 
 .inventory-output-item li {
@@ -95,7 +97,7 @@ span i {
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 365px) {
     .tour-output-list {
         display: flex;
         flex-direction: column;
@@ -105,7 +107,7 @@ span i {
     }
     h3 {
         position: relative;
-        left: -10%;
+        left: -20%;
         margin: 0;
         padding: 0;
     }
