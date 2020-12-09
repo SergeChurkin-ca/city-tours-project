@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import firebase from "../../firebase";
+import preloadedImg from "./spinner.gif";
 
 // Data obtained from DB and rendered on page
 export default class Tour extends Component {
+ 
   constructor() {
     super();
     this.state = {
       tours: [],
       removeTour: "",
       showInfo: false,
+      loaded: false
     };
   }
 
@@ -27,6 +30,7 @@ export default class Tour extends Component {
 
   componentDidMount() {
     const dbRef = firebase.database().ref();
+    
 
     dbRef.on("value", (snapshot) => {
       // checking changes in db
@@ -58,7 +62,9 @@ export default class Tour extends Component {
   }
 
   render() {
+
     return (
+      
       <div className="tour-output-list">
         {this.state.tours.map((toursObject) => {
           return (
@@ -80,7 +86,13 @@ export default class Tour extends Component {
                 </li>
                 <li> {toursObject.seats} seats</li>
               </ul>
-              <div className="img-container">
+              {/* spinner image as a default background to prevent empty section  */}
+              <div className="img-container" style={{
+              background: `url(${preloadedImg}) no-repeat center`,
+              height: '20em',
+                // width: '100%',
+            
+            }}>
                 {this.state.showInfo === toursObject.id && (
                   // text that toggles when clicking on info button
                   <p className="tour-info">
@@ -97,8 +109,11 @@ export default class Tour extends Component {
               </div>
             </section>
           );
-        })}
+        }
+        )}
       </div>
     );
   }
 }
+
+
