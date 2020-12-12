@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import firebase from "../../firebase";
 import preloadedImg from "./spinner.gif";
 
+
 // Data obtained from DB and rendered on page
 export default class Tour extends Component {
  
@@ -68,8 +69,8 @@ export default class Tour extends Component {
       <div className="tour-output-list">
         {this.state.tours.map((toursObject) => {
           return (
-            <section className="tour-output-Item">
-              <header class="header-tour">
+            <section className="tour-output-Item" key={toursObject.id}>
+              <header className="header-tour">
                 <h3> {toursObject.name} </h3>
                 <h5>
                   info {/* button that toggles info */}
@@ -101,7 +102,7 @@ export default class Tour extends Component {
                       className="close-btn"
                       onClick={() => this.removeTour(toursObject.id)}
                     >
-                      <i class="fas fa-chevron-up"> </i>
+                      <i className="fas fa-chevron-up"> </i>
                     </span>
                   </p>
                 )}
